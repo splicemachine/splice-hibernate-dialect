@@ -2,11 +2,6 @@ package com.splicemachine;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-/**
- * Testing of patched support for Derby limit and offset queries; see HHH-3972
- *
- * @author Evan Leonard
- */
 
 public class SpliceDialectTest {
 

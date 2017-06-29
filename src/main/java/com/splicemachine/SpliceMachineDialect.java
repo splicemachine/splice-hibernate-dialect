@@ -22,19 +22,8 @@ import org.hibernate.sql.DerbyCaseFragment;
 
 import org.jboss.logging.Logger;
 
-/**
- * Hibernate Dialect for Cloudscape 10 - aka Derby. This implements both an
- * override for the identity column generator as well as for the case statement
- * issue documented at:
- * http://www.jroller.com/comments/kenlars99/Weblog/cloudscape_soon_to_be_derby
- *
- * @author Simon Johnston
- *
- * @deprecated HHH-6073
- */
-@Deprecated
+
 public class SpliceMachineDialect extends DB2Dialect {
-	@SuppressWarnings("deprecation")
 	private static final CoreMessageLogger LOG = Logger.getMessageLogger(
 			CoreMessageLogger.class,
 			SpliceMachineDialect.class.getName()
@@ -143,20 +132,6 @@ public class SpliceMachineDialect extends DB2Dialect {
 		return limitHandler;
 	}
 
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * From Derby 10.5 Docs:
-	 * <pre>
-	 * Query
-	 * [ORDER BY clause]
-	 * [result offset clause]
-	 * [fetch first clause]
-	 * [FOR UPDATE clause]
-	 * [WITH {RR|RS|CS|UR}]
-	 * </pre>
-	 */
 	@Override
 	public String getLimitString(String query, final int offset, final int limit) {
 		final StringBuilder sb = new StringBuilder(query.length() + 50);
