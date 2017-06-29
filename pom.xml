@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Apache Derby is a subproject of the Apache DB project, and is licensed under
+  ~ the Apache License, Version 2.0 (the "License"); you may not use these files
+  ~ except in compliance with the License. You may obtain a copy of the License at:
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software distributed
+  ~ under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+  ~ CONDITIONS OF ANY KIND, either express or implied. See the License for the
+  ~ specific language governing permissions and limitations under the License.
+  ~
+  ~ Splice Machine, Inc. has modified this file.
+  ~
+  ~ All Splice Machine modifications are Copyright 2012 - 2017 Splice Machine, Inc.,
+  ~ and are licensed to you under the License; you may not use this file except in
+  ~ compliance with the License.
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software distributed
+  ~ under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+  ~ CONDITIONS OF ANY KIND, either express or implied. See the License for the
+  ~ specific language governing permissions and limitations under the License.
+  ~
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spliceengine-parent</artifactId>
+        <groupId>com.splicemachine</groupId>
+        <version>2.6.0.1726-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>splice-hibernate-dialect</artifactId>
+    <!--
+    Classes in this module and its dependencies make up our splice JDBC driver.  Because the jdbc driver will be on the
+    classpath of customer java applications that use it, the driver jar must NOT contain any unshaded third party
+    dependencies.  (Using splice JDBC driver should not force a customer to use a particular version of guava, for
+    example).
+    -->
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>db-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+</project>
