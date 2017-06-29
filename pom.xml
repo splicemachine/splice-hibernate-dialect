@@ -31,12 +31,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>splice-hibernate-dialect</artifactId>
-    <!--
-    Classes in this module and its dependencies make up our splice JDBC driver.  Because the jdbc driver will be on the
-    classpath of customer java applications that use it, the driver jar must NOT contain any unshaded third party
-    dependencies.  (Using splice JDBC driver should not force a customer to use a particular version of guava, for
-    example).
-    -->
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
