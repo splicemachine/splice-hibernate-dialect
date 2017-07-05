@@ -1,4 +1,4 @@
-package com.splicemachine;
+package com.splicemachine.hibernate;
 import java.lang.reflect.Method;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;

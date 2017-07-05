@@ -1,4 +1,4 @@
-package com.splicemachine;
+package com.splicemachine.hibernate;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
