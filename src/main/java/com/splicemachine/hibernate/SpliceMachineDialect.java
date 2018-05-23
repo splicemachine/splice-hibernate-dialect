@@ -110,6 +110,20 @@ public class SpliceMachineDialect extends DB2Dialect {
 		return false;
 	}
 
+	@Override
+	public boolean supportsLimit() {
+		return true;
+	}
+
+	@Override
+	public boolean supportsLimitOffset() {
+		return true;
+	}
+
+	@Override
+	public boolean supportsVariableLimit() {
+		return false;
+	}
 
 	@Override
 	public String getForUpdateString() {
